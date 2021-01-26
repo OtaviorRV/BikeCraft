@@ -123,9 +123,10 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 30px;
 }
-.span-email {
+.orcamento-dados span:nth-last-of-type(1) {
   margin-bottom: 20px;
 }
+
 .formulario button {
   padding: 7px 40px;
   background: none;
