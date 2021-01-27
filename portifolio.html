@@ -10,6 +10,7 @@
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/Portifolio.css">
    <link rel="stylesheet" href="css/responsivo.css">
+   <script>document.documentElement.classList.add("js");</script>
 
    <title>Bikecraft - Portifolio</title>
 </head>
@@ -35,14 +36,30 @@
          <p>conheça os projetos que amamos criar</p>
       </div>
    </section>
-   <section class="container">
+   <section class="container" data-slide="quote">
       <blockquote class="quote-cliente">
-         <p>No mundo atual, a continua expansão de nossa atividade cumpre um papel essencial na formulação da gestão inovadora da qual fazemos parte.</p>
+         <p>"No mundo atual, a continua expansão de nossa atividade cumpre um papel essencial na formulação da gestão inovadora da qual fazemos parte."</p>
          <cite>Barbara Moss</cite>
+      </blockquote>
+      <blockquote class="quote-cliente">
+         <p>"Nada melhor que dar um rolê com a minha Bikecraft na orla.
+            Essa é a minha companheira mais fiél, nunca me traiu e está sempre a minha disposição."
+         </p>
+         <cite>Jhony Rato</cite>
+      </blockquote>
+      <blockquote class="quote-cliente">
+         <p>"Aqueles que ainda não possuem uma Bikecraft, não sabem o que estão perdendo. A precisão é absurda e a velocidade transcendental. Nunca vi nada igual."</p>
+         <cite>Bernardo Monteiro</cite>
       </blockquote>
    </section>
    <section class="portifolio">
-      <div class="container">
+      <div class="container" data-slide="portifolio">
+         <ul class="portifolio-lista">
+
+            <li class="grid-8"><img src="img/portfolio/retro.jpg" alt="Bicicleta Retro"></li>
+            <li class="grid-8"><img src="img/portfolio/passeio.jpg" alt="Bicicleta Retro"></li>
+            <li class="grid-16"><img src="img/portfolio/esporte.jpg" alt="Bicicleta Retro"></li>
+         </ul>
          <ul class="portifolio-lista">
 
             <li class="grid-8"><img src="img/portfolio/retro.jpg" alt="Bicicleta Retro"></li>
@@ -90,6 +107,10 @@
          </div>
       </div>
    </footer>
+   <script language="JavaScript" type="text/javascript" src="./js/simple-slide.js"></script>
+   <script language="JavaScript" type="text/javascript" src="./js/simple-anime.js"></script>
+   <script language="JavaScript" type="text/javascript" src="./js/script.js"></script>
+
 </body>
 
 </html>
