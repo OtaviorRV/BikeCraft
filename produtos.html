@@ -2,8 +2,14 @@
 <html lang="pt-br">
 
 <head>
-   <meta charset="UTF-8">
+   <meta charset=" UTF-8">
+   <meta property="og:title" content="Bikecraft - Bicicletas Personalizadas" />
+   <meta property="og:type" content="website" />
+   <meta property="og:url" content="http://bikecraft.com" />
+   <meta property="og:description" content="Compre sua Bicicleta personalizada na Bikecraft. Possuimos modelos Passeios, Retrô e Esporte." />
+   <meta property="og:image" content="http://bikecraft.com/img/og-image.png" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="favicon.ico">
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="css/grid.css">
    <link rel="stylesheet" href="css/reset.css">
@@ -94,12 +100,17 @@
    <section class="orcamento">
       <div class="container">
          <h2 class="subtitulo">Orçamento</h2>
-         <form action="" id="form-orcamento" class="formulario grid-8">
-            <label for="nome"> Nome</label><input type="text" name="nome" id="nome">
-            <label for="email">E-Mail </label><input type="email" name="email" id="email">
-            <label for="Telefone">Telefone</label> <input type="text" name="Telefone" id="Telefone">
-            <label for="especificacoes">Especificações</label><textarea id="espec"></textarea>
-            <button type="submit" class="btn">Enviar</button>
+         <form method="POST" action="./enviar-sendgrid.php" id="formulario" class="formulario grid-8 formphp">
+            <label for="nome"> Nome*</label><input type="text" name="nome" id="nome" required>
+            <label for="email">E-Mail* </label><input type="email" name="email" id="email" required>
+            <label for="telefone">Telefone*</label> <input type="text" name="telefone" id="telefone" required>
+
+            <label class="nao-aparece">Se você não é um robo, deixe em branco</label>
+            <input type="text" class="nao-aparece" name="leaveblank">
+            <label class="nao-aparece">Se você não é um robo, nao mude este campo</label>
+            <input type="text" class="nao-aparece" name="dontchange" value="http://">
+            <label for="mensagem">Especificações</label><textarea name="mensagem" id="mensage" required></textarea>
+            <button id="enviar" name="enviar" type="submit" class="btn ">Enviar</button>
          </form>
          <div class="orcamento-dados grid-8">
             <h3>Dados</h3>
@@ -156,6 +167,7 @@
       </div>
    </footer>
 </body>
+<script language="JavaScript" type="text/javascript" src="./js/simple-form.js"></script>
 <script language="JavaScript" type="text/javascript" src="./js/simple-anime.js"></script>
 <script language="JavaScript" type="text/javascript" src="./js/simple-slide.js"></script>
 <script language="JavaScript" type="text/javascript" src="./js/script.js"></script>
